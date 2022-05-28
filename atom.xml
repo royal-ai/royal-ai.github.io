@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>阿聪的博客</title>
-  <icon>http://example.com/icon.png</icon>
+  <icon>https://royal-ai.github.io/icon.png</icon>
   <subtitle>littleBlog</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://royal-ai.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://royal-ai.github.io/"/>
   <updated>2022-05-28T07:57:27.627Z</updated>
-  <id>http://example.com/</id>
+  <id>https://royal-ai.github.io/</id>
   
   <author>
     <name>xc</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>testImage</title>
-    <link href="http://example.com/2022/05/28/testImage-1/"/>
-    <id>http://example.com/2022/05/28/testImage-1/</id>
+    <link href="https://royal-ai.github.io/2022/05/28/testImage-1/"/>
+    <id>https://royal-ai.github.io/2022/05/28/testImage-1/</id>
     <published>2022-05-28T07:57:27.000Z</published>
     <updated>2022-05-28T07:57:27.627Z</updated>
     
@@ -31,8 +31,8 @@
   
   <entry>
     <title>testImage</title>
-    <link href="http://example.com/2022/05/28/testImage/"/>
-    <id>http://example.com/2022/05/28/testImage/</id>
+    <link href="https://royal-ai.github.io/2022/05/28/testImage/"/>
+    <id>https://royal-ai.github.io/2022/05/28/testImage/</id>
     <published>2022-05-28T07:56:34.000Z</published>
     <updated>2022-05-28T07:57:05.518Z</updated>
     
@@ -47,8 +47,8 @@
   
   <entry>
     <title>hello.md</title>
-    <link href="http://example.com/2022/05/26/hello-md/"/>
-    <id>http://example.com/2022/05/26/hello-md/</id>
+    <link href="https://royal-ai.github.io/2022/05/26/hello-md/"/>
+    <id>https://royal-ai.github.io/2022/05/26/hello-md/</id>
     <published>2022-05-26T08:03:48.000Z</published>
     <updated>2022-05-28T07:55:15.342Z</updated>
     
@@ -63,8 +63,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/05/26/hello-world/"/>
-    <id>http://example.com/2022/05/26/hello-world/</id>
+    <link href="https://royal-ai.github.io/2022/05/26/hello-world/"/>
+    <id>https://royal-ai.github.io/2022/05/26/hello-world/</id>
     <published>2022-05-26T03:34:25.015Z</published>
     <updated>2022-05-26T03:34:25.015Z</updated>
     
