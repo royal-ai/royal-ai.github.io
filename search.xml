@@ -26,7 +26,43 @@
 <p><a href="www.wordpress.org">wordpres</a></p>
 <p><a href="www.hexo.io">hexo</a></p>
 <p><a href="https://www.bilibili.com/video/BV1at411X7nu?spm_id_from=333.999.0.0">b站up主</a></p>
-<img src="/.io//05/26/hello-md/image-20220528154051417.png" class title="testImage">
+<img src="image-20220528154051417.png" class title="testImage">
+
+
+<h3 id="试一下使用github部署hexo"><a href="#试一下使用github部署hexo" class="headerlink" title="试一下使用github部署hexo"></a>试一下使用github部署hexo</h3><p>主要参考<a href="https://blog.xmwpro.com/post/b9948411.html#%E5%B0%86-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub">从零开始搭建Hexo个人博客</a>有几个需要注意的点就是：</p>
+<ul>
+<li>github链接使用ssh，不要用https连接不稳定</li>
+<li>可以通过查看F12将加载慢的资源放到自带服务器上，优化启动速度。</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>testImage</title>
+    <url>/2022/05/28/testImage/</url>
+    <content><![CDATA[<h1 id="个人博客搭建调研"><a href="#个人博客搭建调研" class="headerlink" title="个人博客搭建调研"></a>个人博客搭建调研</h1><h2 id="动态建站"><a href="#动态建站" class="headerlink" title="动态建站"></a>动态建站</h2><p>动态建站指的是自己搭建后端和前端，灵活性和功能性强但是开发难度比较高。</p>
+<h2 id="静态建站"><a href="#静态建站" class="headerlink" title="静态建站"></a>静态建站</h2><p>纯前端界面，不支持登录</p>
+<span id="more"></span>
+<ul>
+<li><p>wordpress</p>
+<p><strong>WordPress</strong>是一个以<a href="https://zh.m.wikipedia.org/wiki/PHP">PHP</a>和<a href="https://zh.m.wikipedia.org/wiki/MySQL">MySQL</a>为平台的<a href="https://zh.m.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6">自由开源</a>的博客软件和<a href="https://zh.m.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">内容管理系统</a>[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-5">5]</a>。WordPress具有插件架构和模板系统。截至2018年4月，排名前1000万的网站中超过30.6%使用WordPress[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-6">6]</a>。WordPress是最受欢迎的网站<a href="https://zh.m.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">内容管理系统</a>[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-7">7]</a>。全球有大约40%的网站(7亿5000个)都是使用WordPress架设网站的。[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-8">8]</a>WordPress是目前<a href="https://zh.m.wikipedia.org/wiki/%E5%9B%A0%E7%89%B9%E7%BD%91">因特网</a>上最流行的博客系统。[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-9">9]</a>[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-10">10]</a>WordPress在最著名的网络发布阶段中脱颖而出。如今，它被使用在超过7000万个站点上。[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-11">11]</a></p>
+</li>
+<li><p>Hexo</p>
+<p>支持markdown，node.js 搭建</p>
+</li>
+<li><p>jekyll</p>
+</li>
+<li><p>gohugo</p>
+</li>
+<li><p>vuepress</p>
+</li>
+<li><p>solo</p>
+</li>
+</ul>
+<p>参考链接：</p>
+<p><a href="www.wordpress.org">wordpres</a></p>
+<p><a href="www.hexo.io">hexo</a></p>
+<p><a href="https://www.bilibili.com/video/BV1at411X7nu?spm_id_from=333.999.0.0">b站up主</a></p>
+<img src="image-20220528154051417.png" class title="testImage">
 
 <h3 id="试一下使用github部署hexo"><a href="#试一下使用github部署hexo" class="headerlink" title="试一下使用github部署hexo"></a>试一下使用github部署hexo</h3><p>主要参考<a href="https://blog.xmwpro.com/post/b9948411.html#%E5%B0%86-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub">从零开始搭建Hexo个人博客</a>有几个需要注意的点就是：</p>
 <ul>
@@ -57,40 +93,5 @@
     <title>testImage</title>
     <url>/2022/05/28/testImage-1/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>testImage</title>
-    <url>/2022/05/28/testImage/</url>
-    <content><![CDATA[<h1 id="个人博客搭建调研"><a href="#个人博客搭建调研" class="headerlink" title="个人博客搭建调研"></a>个人博客搭建调研</h1><h2 id="动态建站"><a href="#动态建站" class="headerlink" title="动态建站"></a>动态建站</h2><p>动态建站指的是自己搭建后端和前端，灵活性和功能性强但是开发难度比较高。</p>
-<h2 id="静态建站"><a href="#静态建站" class="headerlink" title="静态建站"></a>静态建站</h2><p>纯前端界面，不支持登录</p>
-<span id="more"></span>
-<ul>
-<li><p>wordpress</p>
-<p><strong>WordPress</strong>是一个以<a href="https://zh.m.wikipedia.org/wiki/PHP">PHP</a>和<a href="https://zh.m.wikipedia.org/wiki/MySQL">MySQL</a>为平台的<a href="https://zh.m.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E5%8F%8A%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BD%AF%E4%BB%B6">自由开源</a>的博客软件和<a href="https://zh.m.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">内容管理系统</a>[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-5">5]</a>。WordPress具有插件架构和模板系统。截至2018年4月，排名前1000万的网站中超过30.6%使用WordPress[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-6">6]</a>。WordPress是最受欢迎的网站<a href="https://zh.m.wikipedia.org/wiki/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">内容管理系统</a>[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-7">7]</a>。全球有大约40%的网站(7亿5000个)都是使用WordPress架设网站的。[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-8">8]</a>WordPress是目前<a href="https://zh.m.wikipedia.org/wiki/%E5%9B%A0%E7%89%B9%E7%BD%91">因特网</a>上最流行的博客系统。[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-9">9]</a>[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-10">10]</a>WordPress在最著名的网络发布阶段中脱颖而出。如今，它被使用在超过7000万个站点上。[<a href="https://zh.m.wikipedia.org/zh-hans/WordPress#cite_note-11">11]</a></p>
-</li>
-<li><p>Hexo</p>
-<p>支持markdown，node.js 搭建</p>
-</li>
-<li><p>jekyll</p>
-</li>
-<li><p>gohugo</p>
-</li>
-<li><p>vuepress</p>
-</li>
-<li><p>solo</p>
-</li>
-</ul>
-<p>参考链接：</p>
-<p><a href="www.wordpress.org">wordpres</a></p>
-<p><a href="www.hexo.io">hexo</a></p>
-<p><a href="https://www.bilibili.com/video/BV1at411X7nu?spm_id_from=333.999.0.0">b站up主</a></p>
-<img src="/.io//05/28/testImage/image-20220528154051417.png" class title="testImage">
-
-<h3 id="试一下使用github部署hexo"><a href="#试一下使用github部署hexo" class="headerlink" title="试一下使用github部署hexo"></a>试一下使用github部署hexo</h3><p>主要参考<a href="https://blog.xmwpro.com/post/b9948411.html#%E5%B0%86-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub">从零开始搭建Hexo个人博客</a>有几个需要注意的点就是：</p>
-<ul>
-<li>github链接使用ssh，不要用https连接不稳定</li>
-<li>可以通过查看F12将加载慢的资源放到自带服务器上，优化启动速度。</li>
-</ul>
-]]></content>
   </entry>
 </search>
