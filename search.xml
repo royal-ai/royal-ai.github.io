@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2022/05/28/APUE/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer">
-# APUE 学习笔记
+    <title>APUE学习记录</title>
+    <url>/2022/05/29/APUE%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
 
-<h2 id="1，setjmp-和-longjmp"><a href="#1，setjmp-和-longjmp" class="headerlink" title="1，setjmp 和 longjmp"></a>1，setjmp 和 longjmp</h2><p>使用setJump和longJump 相当于使用非局部的goto，可以在栈上跳过若干的调用帧，返回到当前函数的调用路径的某个函数中。<br>在希望返回到的位置调用setjmp,然后调用longjmp函数返回到setjmp的位置。setjump第一次调用返回0，否则是从longjmp调用返回的数值。<br>在longjmp返回的过程中，全局变量，静态变量，volatile 变量不会改变，其他类型的变量可能会回滚。</p>
+<h1 id="APUE-学习笔记"><a href="#APUE-学习笔记" class="headerlink" title="APUE 学习笔记"></a>APUE 学习笔记</h1><h2 id="1，setjmp-和-longjmp"><a href="#1，setjmp-和-longjmp" class="headerlink" title="1，setjmp 和 longjmp"></a>1，setjmp 和 longjmp</h2><p>使用setJump和longJump 相当于使用非局部的goto，可以在栈上跳过若干的调用帧，返回到当前函数的调用路径的某个函数中。<br>在希望返回到的位置调用setjmp,然后调用longjmp函数返回到setjmp的位置。setjump第一次调用返回0，否则是从longjmp调用返回的数值。<br>在longjmp返回的过程中，全局变量，静态变量，volatile 变量不会改变，其他类型的变量可能会回滚。</p>
 <h2 id="2，getrlimit-和-setrlimit函数"><a href="#2，getrlimit-和-setrlimit函数" class="headerlink" title="2，getrlimit 和 setrlimit函数"></a>2，getrlimit 和 setrlimit函数</h2><p>每个进程都有一组资源限制，可以使用getrlimit和setrlimit函数来查询和更改。</p>
+<span id="more"></span>
+
 <h2 id="chapter-8"><a href="#chapter-8" class="headerlink" title="chapter 8"></a>chapter 8</h2><h3 id="进程标识符"><a href="#进程标识符" class="headerlink" title="进程标识符"></a>进程标识符</h3><p>ID为0的进程通常是调度进程，也被称为交换进程swapper,是内核的一部分。<br>ID为1的进程是init进程，负责初始化系统，将其引导到一个状态<br>ID为2的进程是守护进程pagedaemon。负责支持虚拟存储系统的分页操作<br>1 pid_t getpid (void) 返回进程ID_<br>_2 pid_t getppid(void) 返回父进程ID<br>3 getuid(void) 返回进程的实际用户ID<br>4 geteuid(void) 返回进程的有效用户ID<br>5 getgid(void) 返回进程的实际组ID<br>6 getegid(void) 返回进程的有小组ID</p>
 <h3 id="pid-t-fork-void"><a href="#pid-t-fork-void" class="headerlink" title="pid_t fork(void)"></a>pid_t fork(void)</h3><p><img src="https://cdn.nlark.com/yuque/0/2022/png/1286783/1653806404776-85ca1ebc-b2f8-4f03-a7dc-70dc395fa580.png#crop=0&crop=0&crop=1&crop=1&id=VXzYT&originHeight=52&originWidth=575&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
 <p>fork的一个特性是父进程的所有打开文件描述符都被复制到子进程中。父子进程的每个打开描述符共享一个文件表项。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/1286783/1653806405242-a1844547-667f-458f-9509-51eaceb86a71.png#crop=0&crop=0&crop=1&crop=1&id=hNi1E&originHeight=634&originWidth=900&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
@@ -153,21 +154,6 @@
 <p>一个可重入函数需要满足的是：<br>1、不使用全局变量或静态变量；<br>2、不使用用malloc或者new开辟出的空间；<br>3、不调用不可重入函数；<br>4、不返回静态或全局数据，所有数据都有函数的调用者提供；<br>5、使用本地数据，或者通过制作全局数据的本地拷贝来保护全局数据；<br>6，不适用标准IO函数printf,scanf等（因为有用户缓冲区，而用户缓冲区有锁保护）<br>不可重入函数符合以下条件之一：<br>1、调用了malloc&#x2F;free函数，因为malloc函数是用全局链表来管理堆的。<br>2、调用了标准I&#x2F;O库函数，标准I&#x2F;O库的很多实现都以不可重入的方式使用全局数据结构。<br>3、可重入体内使用了静态的数据结构。<br>4，使用了锁（会造成死锁）<br>&#x3D;&#x3D;可重入与线程安全和异步信号安全的关系&#x3D;&#x3D;：如果一个函数对多个线程来说是可重入的，则说这个函数是线程安全的。如果函数对异步信号处理程序的重入是安全的，那么函数是异步信号安全的。</p>
 <h2 id="2，什么情况下一个函数是线程安全但是对信号处理函数是不可重入的？"><a href="#2，什么情况下一个函数是线程安全但是对信号处理函数是不可重入的？" class="headerlink" title="2，什么情况下一个函数是线程安全但是对信号处理函数是不可重入的？"></a>2，什么情况下一个函数是线程安全但是对信号处理函数是不可重入的？</h2><p>假设函数func() 在执行过程中需要访问某个共享资源，因此为了实现线程安全，在使用该资源前加锁，在不需要资源解锁。那么在执行func执行到一半的时候，遇到信号并执行一个调用了func的信号处理函数，这个时候就出现了死锁。但是如果是线程在调用则不会发生这种情况</p>
 <h2 id="3-什么是系统cpu时间，用户cpu时间，时钟时间？"><a href="#3-什么是系统cpu时间，用户cpu时间，时钟时间？" class="headerlink" title="3,什么是系统cpu时间，用户cpu时间，时钟时间？"></a>3,什么是系统cpu时间，用户cpu时间，时钟时间？</h2><p>进程有三种运行状态，阻塞，就绪，运行。<br>那么系统cpu时间和用户cpu时间就是系统和用户分别在运行情况下的时间。而时钟时间则是指内核从开始运行到结束整个过程所需要的时间。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2022/05/28/vim%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="vim-学习之路"><a href="#vim-学习之路" class="headerlink" title="vim 学习之路"></a>vim 学习之路</h1><h2 id="遇到的坑"><a href="#遇到的坑" class="headerlink" title="遇到的坑"></a>遇到的坑</h2><h3 id="MAC下载VIM失败"><a href="#MAC下载VIM失败" class="headerlink" title="MAC下载VIM失败"></a>MAC下载VIM失败</h3><p><a href="https://zhuanlan.zhihu.com/p/383707713">参考</a></p>
-<h3 id="键值映射"><a href="#键值映射" class="headerlink" title="键值映射"></a>键值映射</h3><p>使用vim的时候感觉每次都去按esc键非常的麻烦，于是可以使用命令 imap jk <esc> 来做键值映射，其中要注意的坑是在配置文件中不要写上:set paste,否则会覆盖插入模式的键值映射。</esc></p>
-<h2 id="最终vim配置文件"><a href="#最终vim配置文件" class="headerlink" title="最终vim配置文件"></a>最终vim配置文件</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936                                     </span><br><span class="line">set termencoding=utf-8</span><br><span class="line">set encoding=utf-8</span><br><span class="line">syntax on</span><br><span class="line">set nu</span><br><span class="line"></span><br><span class="line">set cul</span><br><span class="line"></span><br><span class="line">set showmatch </span><br><span class="line"></span><br><span class="line">set tabstop=4</span><br><span class="line">set shiftwidth=4</span><br><span class="line">set autoindent</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">filetype plugin indent on</span><br><span class="line"></span><br><span class="line">autocmd BufWritePost $MYVIMRC source $MYVIMRC</span><br><span class="line">let mapleader=&#x27;,&#x27;</span><br><span class="line">imap jk &lt;esc&gt;</span><br><span class="line"> </span><br><span class="line">set hlsearch   </span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考链接：</p>
-<p><a href="https://cn.ifaj-congress.org/236207-my-vim-basic-imap-mappings-HPNMZS-article">键值映射失败</a></p>
-<p><a href="http://yyq123.github.io/learn-vim/learn-vi-51-KeyMapping.html">VIM键值映射</a></p>
-<p><a href="https://www.jianshu.com/p/923aec861af3">MACVIM 配置</a></p>
 ]]></content>
   </entry>
 </search>

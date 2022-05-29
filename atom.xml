@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-29T09:03:02.058Z</updated>
+  <updated>2022-05-29T09:50:40.401Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,44 +17,17 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://example.com/2022/05/28/APUE/"/>
-    <id>http://example.com/2022/05/28/APUE/</id>
-    <published>2022-05-28T09:05:36.315Z</published>
-    <updated>2022-05-29T09:03:02.058Z</updated>
+    <title>APUE学习记录</title>
+    <link href="http://example.com/2022/05/29/APUE%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <id>http://example.com/2022/05/29/APUE%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
+    <published>2022-05-29T09:41:45.000Z</published>
+    <updated>2022-05-29T09:50:40.401Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-# APUE 学习笔记
+    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
 
-&lt;h2 id=&quot;1，setjmp-和-longjmp&quot;&gt;&lt;a href=&quot;#1，setjmp-和-longjmp&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2022/05/28/vim%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-    <id>http://example.com/2022/05/28/vim%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</id>
-    <published>2022-05-28T09:03:25.143Z</published>
-    <updated>2022-02-27T13:29:07.920Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vim-学习之路&quot;&gt;&lt;a href=&quot;#vim-学习之路&quot; class=&quot;headerlink&quot; title=&quot;vim 学习之路&quot;&gt;&lt;/a&gt;vim 学习之路&lt;/h1&gt;&lt;h2 id=&quot;遇到的坑&quot;&gt;&lt;a href=&quot;#遇到的坑&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+&lt;h1 id=&quot;APUE-学习笔记&quot;&gt;&lt;a href=&quot;#APUE-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;APUE 学习笔记&quot;&gt;&lt;/a&gt;APUE 学习笔记&lt;/h1&gt;&lt;h2 id=&quot;1，setjmp-和-longjmp&quot;&gt;&lt;a href=&quot;#1，setjmp-和-longjmp&quot; class=&quot;headerlink&quot; title=&quot;1，setjmp 和 longjmp&quot;&gt;&lt;/a&gt;1，setjmp 和 longjmp&lt;/h2&gt;&lt;p&gt;使用setJump和longJump 相当于使用非局部的goto，可以在栈上跳过若干的调用帧，返回到当前函数的调用路径的某个函数中。&lt;br&gt;在希望返回到的位置调用setjmp,然后调用longjmp函数返回到setjmp的位置。setjump第一次调用返回0，否则是从longjmp调用返回的数值。&lt;br&gt;在longjmp返回的过程中，全局变量，静态变量，volatile 变量不会改变，其他类型的变量可能会回滚。&lt;/p&gt;
+&lt;h2 id=&quot;2，getrlimit-和-setrlimit函数&quot;&gt;&lt;a href=&quot;#2，getrlimit-和-setrlimit函数&quot; class=&quot;headerlink&quot; title=&quot;2，getrlimit 和 setrlimit函数&quot;&gt;&lt;/a&gt;2，getrlimit 和 setrlimit函数&lt;/h2&gt;&lt;p&gt;每个进程都有一组资源限制，可以使用getrlimit和setrlimit函数来查询和更改。&lt;/p&gt;</summary>
     
     
     
