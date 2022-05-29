@@ -229,7 +229,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-29 16:44:09" itemprop="dateModified" datetime="2022-05-29T16:44:09+08:00">2022-05-29</time>
+                <time title="Modified: 2022-05-29 17:03:02" itemprop="dateModified" datetime="2022-05-29T17:03:02+08:00">2022-05-29</time>
               </span>
 
           <br>
@@ -257,7 +257,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="APUE-学习笔记"><a href="#APUE-学习笔记" class="headerlink" title="APUE 学习笔记"></a>APUE 学习笔记</h1><h2 id="1，setjmp-和-longjmp"><a href="#1，setjmp-和-longjmp" class="headerlink" title="1，setjmp 和 longjmp"></a>1，setjmp 和 longjmp</h2><p>使用setJump和longJump 相当于使用非局部的goto，可以在栈上跳过若干的调用帧，返回到当前函数的调用路径的某个函数中。<br>在希望返回到的位置调用setjmp,然后调用longjmp函数返回到setjmp的位置。setjump第一次调用返回0，否则是从longjmp调用返回的数值。<br>在longjmp返回的过程中，全局变量，静态变量，volatile 变量不会改变，其他类型的变量可能会回滚。</p>
+          <meta name="referrer" content="no-referrer">
+# APUE 学习笔记
+
+<h2 id="1，setjmp-和-longjmp"><a href="#1，setjmp-和-longjmp" class="headerlink" title="1，setjmp 和 longjmp"></a>1，setjmp 和 longjmp</h2><p>使用setJump和longJump 相当于使用非局部的goto，可以在栈上跳过若干的调用帧，返回到当前函数的调用路径的某个函数中。<br>在希望返回到的位置调用setjmp,然后调用longjmp函数返回到setjmp的位置。setjump第一次调用返回0，否则是从longjmp调用返回的数值。<br>在longjmp返回的过程中，全局变量，静态变量，volatile 变量不会改变，其他类型的变量可能会回滚。</p>
 <h2 id="2，getrlimit-和-setrlimit函数"><a href="#2，getrlimit-和-setrlimit函数" class="headerlink" title="2，getrlimit 和 setrlimit函数"></a>2，getrlimit 和 setrlimit函数</h2><p>每个进程都有一组资源限制，可以使用getrlimit和setrlimit函数来查询和更改。</p>
 <h2 id="chapter-8"><a href="#chapter-8" class="headerlink" title="chapter 8"></a>chapter 8</h2><h3 id="进程标识符"><a href="#进程标识符" class="headerlink" title="进程标识符"></a>进程标识符</h3><p>ID为0的进程通常是调度进程，也被称为交换进程swapper,是内核的一部分。<br>ID为1的进程是init进程，负责初始化系统，将其引导到一个状态<br>ID为2的进程是守护进程pagedaemon。负责支持虚拟存储系统的分页操作<br>1 pid_t getpid (void) 返回进程ID_<br>_2 pid_t getppid(void) 返回父进程ID<br>3 getuid(void) 返回进程的实际用户ID<br>4 geteuid(void) 返回进程的有效用户ID<br>5 getgid(void) 返回进程的实际组ID<br>6 getegid(void) 返回进程的有小组ID</p>
 <h3 id="pid-t-fork-void"><a href="#pid-t-fork-void" class="headerlink" title="pid_t fork(void)"></a>pid_t fork(void)</h3><p><img src="https://cdn.nlark.com/yuque/0/2022/png/1286783/1653806404776-85ca1ebc-b2f8-4f03-a7dc-70dc395fa580.png#crop=0&crop=0&crop=1&crop=1&id=VXzYT&originHeight=52&originWidth=575&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
